@@ -1,0 +1,5 @@
+venv/
+__pycache__/
+.env
+# clients_data_base.db
+customer_report.xlsx

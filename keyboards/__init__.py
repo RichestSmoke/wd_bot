@@ -1,0 +1,2 @@
+from keyboards.client_kb import main_keyboard_client, rental_keyboard_client, buy_keyboard_client, house_buy_keyboard_client, get_contact_kb
+from keyboards.admin_kb import main_menu_kb, exit_admin_kb, customer_report_kb
