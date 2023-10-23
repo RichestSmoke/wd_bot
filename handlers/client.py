@@ -20,7 +20,7 @@ async def send_txt_and_get_contact(message: types.Message, state: FSMContext, pr
 
 async def send_welcom(message: types.Message, state: FSMContext):
     text = 'Компанія WD Estate пропонує повний спектр послуг в сфері нерухомості від кращих експертів з багаторічним досвідом.'
-    async with aiofiles.open("bot/od_estate.jpeg", "rb") as photo:
+    async with aiofiles.open("od_estate.jpeg", "rb") as photo:
         await message.answer_photo(photo)
     await message.answer(f"Вітаємо, {message.from_user.first_name}\n{text}")
     await message.answer('Оберіть цікавий для Вас напрямок:', reply_markup=main_keyboard_client)
