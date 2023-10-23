@@ -15,7 +15,7 @@ logging.basicConfig(level=logging.INFO)
 
 load_dotenv()
 TG_API_TOKEN = os.getenv('TELEGRAM_TOKEN')
-WEBHOOK_PATH = f"/{TG_API_TOKEN}"
+WEBHOOK_PATH = f"/bot"
 # NGINX_HOST = os.getenv('NGINX_HOST')
 NGINX_HOST = "https://botrealestateod.alwaysdata.net"
 WEBHOOK_URL = f"{NGINX_HOST}{WEBHOOK_PATH}"
@@ -48,7 +48,7 @@ if __name__ == '__main__':
         on_startup=on_startup,
         on_shutdown=on_shutdown,
         skip_updates=True,
-        host='0.0.0.0',
+        host='::',
         port=8443,)
     
 

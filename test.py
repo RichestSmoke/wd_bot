@@ -7,7 +7,7 @@ IS_WEBHOOK = 1
 
 # TELEGRAM_TOKEN = "6353925003:AAFlyyxPk93tsFWTP7ApoFQ-BcgU4OPSM-A"
 TELEGRAM_TOKEN = "5858378006:AAEs5K4Tn7buTSbr5wqgIH9V1BSnQ9SJF-s"  #2 akk
-NGINX_HOST = "botrealestateod.alwaysdata.net"
+NGINX_HOST = "371a-193-178-49-217.ngrok.io"
 
 # webhook settings
 WEBHOOK_HOST = f'https://{NGINX_HOST}'
