@@ -24,10 +24,10 @@ class AdminStates(StatesGroup):
     GET_CUSTOMER_REPORT = State()
 
 
-wellcome_text = """Добро пожаловать в режим администратора!
+wellcome_text = """Добро пожаловать в админ панель!
                     \nЗдесь вы можете назначить менеджера на определенную категрию.
-                    \nЧто бы добавить менеджера нужно вписать его ID в выбранной категории. ID можно получить в боте @getmyid_bot
-                    \nЧто бы менеджер корректно добавился он должен сначала написать боту команду '/start', только после этого можно добавлять ID менеджера!"""
+                    \n❗️Что бы добавить менеджера нужно вписать его ID в выбранной категории. ID можно получить в боте @getmyid_bot
+                    \n❗️Что бы менеджер корректно добавился он должен сначала написать боту команду '/start', только после этого можно добавлять ID менеджера!"""
 
 
 def validate_manager_id(manager_id):
@@ -36,7 +36,7 @@ def validate_manager_id(manager_id):
 
 
 async def handle_admin_command(message: types.Message, state: FSMContext):
-    if message.from_user.id == admin:
+    if message.from_user.id in admin:
         await message.answer(wellcome_text, reply_markup=main_menu_kb)
         await state.set_state(AdminStates.MAIN_MENU)
     else:
